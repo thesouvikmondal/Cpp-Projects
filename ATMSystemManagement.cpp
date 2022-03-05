@@ -61,7 +61,7 @@ do{
             if(balance>=transferAmount){
                 balance2+=transferAmount;
                 balance-=transferAmount;
-                cout<<"Your Current Balance:  "<<balance;
+                cout<<"Your Current Balance:  "<<balance<<endl;
             }
             else{
                 cout<<"Insufficent Balance"<<endl;
