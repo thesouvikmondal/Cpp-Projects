@@ -19,39 +19,22 @@ public:
 
 	Parking(){                       //CPP Features used constructor
 
-	
-
 		amount=0;
-
 		Count=0;
-
 		two=0;
-
 		three=0;
-
 		four=0;
-
 	}
 
 	void Delet(){
-
-	
-
-			amount=0;
-
-			Count=0;
-
-			two=0;
-
-			three=0;
-
-			four=0;
-
-			cout<<"**************************************************"<<endl;
-
-			cout<<"All Record deleted......."<<endl;
-
-			cout<<"**************************************************"<<endl;
+		amount=0;
+		Count=0;
+		two=0;
+		three=0;
+		four=0;
+		cout<<"**************************************************"<<endl;
+		cout<<"All Record deleted......."<<endl;
+		cout<<"**************************************************"<<endl;
 
 	}
 
@@ -64,34 +47,21 @@ class TwoWheel:virtual public Parking{           //CPP Features used hirarchical
 public:
 
     void t_wheel(){
-
-	
-
 		if(Count<=50){
 
-				two++;
-
-				amount=amount+100;
-
-				Count=Count+1;
-
-				cout<<"**************************************************"<<endl;
-
-				cout<<"A new TwoWheeler has parked"<<endl;
-
-				cout<<"Total numbers of vehicles "<<Count<<endl;
-
-				cout<<"now free space="<<50-(two+three+four)<<endl;
-
-				cout<<"**************************************************"<<endl;
+			two++;
+			amount=amount+100;
+			Count=Count+1;
+			cout<<"**************************************************"<<endl;
+			cout<<"A new TwoWheeler has parked"<<endl;
+			cout<<"Total numbers of vehicles "<<Count<<endl;
+			cout<<"now free space="<<50-(two+three+four)<<endl;
+			cout<<"**************************************************"<<endl;
 
 		}
+		else{
 
-		else
-
-		{
-
-			   cout<<"Sorry! parking is full"<<endl;
+			cout<<"Sorry! parking is full"<<endl;
 
 		}
 
@@ -100,40 +70,22 @@ public:
 };
 
 class ThreeWheel:virtual public Parking{
-
-
-
 public:
+	void th_wheel(){
+		if(Count<=50){
 
-    void th_wheel()
-
-	{
-
-		if(Count<=50)
-
-		{
-
-				three++;
-
-				amount=amount+200;
-
-				Count=Count+1;
-
-				cout<<"**************************************************"<<endl;
-
-				cout<<"A new Three Wheeler has parked"<<endl;
-
-				cout<<"Total numbers of vehicles "<<Count<<endl;
-
-				cout<<"now free space="<<50-(two+three+four)<<endl;
-
-				cout<<"**************************************************"<<endl;
+			three++;
+			amount=amount+200;
+			Count=Count+1;
+			cout<<"**************************************************"<<endl;
+			cout<<"A new Three Wheeler has parked"<<endl;
+			cout<<"Total numbers of vehicles "<<Count<<endl;
+			cout<<"now free space="<<50-(two+three+four)<<endl;
+			cout<<"**************************************************"<<endl;
 
 		}
 
-		else
-
-		{
+		else{
 
 			cout<<"Sorry! parking is full";
 
@@ -143,83 +95,54 @@ public:
 
 };
 
-class FourWheel:virtual public Parking
-
-{
+class FourWheel:virtual public Parking{
 
 public:
 
-    void f_wheel()
+    void f_wheel(){
 
-	{
+		if(Count<=50){
 
-			if(Count<=50)
+			four++;
+			amount=amount+300;
+			Count=Count+1;
+			cout<<"**************************************************"<<endl;
+			cout<<"A new FourWheeler has parked"<<endl;
+			cout<<"Total numbers of vehicles "<<Count<<endl;
+			cout<<"now free space="<<50-(two+three+four)<<endl;
+			cout<<"**************************************************"<<endl;
 
-			{
+		}
 
-				four++;
+		else{
 
-				amount=amount+300;
+			cout<<"Sorry! parking is full";
 
-				Count=Count+1;
-
-				cout<<"**************************************************"<<endl;
-
-				cout<<"A new FourWheeler has parked"<<endl;
-
-				cout<<"Total numbers of vehicles "<<Count<<endl;
-
-				cout<<"now free space="<<50-(two+three+four)<<endl;
-
-				cout<<"**************************************************"<<endl;
-
-			}
-
-			else
-
-			{
-
-				cout<<"Sorry! parking is full";
-
-			}
-
-
+		}
 
 	}
 
 };
 
-class ShowRecord:public TwoWheel,public ThreeWheel,public FourWheel
-
-{
+class ShowRecord:public TwoWheel,public ThreeWheel,public FourWheel{
 
 public:
 
-   void Show()
+   void Show(){
 
-	{
-
-		  cout<<"**************************************************"<<endl;
-
-		  cout<<"Total amount="<<amount<<endl;
-
-		  cout<<"Total numbers of vehicles :"<<Count<<endl;
-
-		  cout<<"Total numbers of Two Wheeler :"<<two<<endl;
-
-		  cout<<"Total number of Three Wheeler :"<<three<<endl;
-
-		  cout<<"Total number of Four Wheeler :"<<four<<endl;
-
-		  cout<<"**************************************************"<<endl;
+		cout<<"**************************************************"<<endl;
+		cout<<"Total amount="<<amount<<endl;
+		cout<<"Total numbers of vehicles :"<<Count<<endl;
+		cout<<"Total numbers of Two Wheeler :"<<two<<endl;
+		cout<<"Total number of Three Wheeler :"<<three<<endl;
+		cout<<"Total number of Four Wheeler :"<<four<<endl;
+		cout<<"**************************************************"<<endl;
 
 	}
 
 } ;
 
-int main()
-
-{
+int main(){
 
 	int u_input;
 
@@ -241,99 +164,67 @@ int main()
 
 	cout<<"**************************************************"<<endl;
 
-	while(1)
-
-	{
+	while(1){
 
 		//Menu
 
 		cout<<"Choose our service........"<<endl;
-
 		cout<<"press 1 for Two Wheeler"<<endl;
-
 		cout<<"press 2 for Three Wheeler"<<endl;
-
 		cout<<"press 3 for Four Wheeler"<<endl;
-
 		cout<<"press 4 for show the record"<<endl;
-
 		cout<<"press 5 for delete the record"<<endl;
-
 		cout<<"press 6 for Exit"<<endl;
-
 		cout<<"**************************************************"<<endl;
-
 		cin>>u_input;
 
-		switch(u_input)
-
-		{
+		switch(u_input){
 
 			case 1:
 
-                    system("cls");
-
-					s.t_wheel();
-
-					break;
+                system("cls");
+				s.t_wheel();
+				break;
 
 			case 2:
 
-                    system("cls");
-
-					s.th_wheel();
-
-					break;
+                system("cls");
+				s.th_wheel();
+				break;
 
 			case 3:
 
-                    system("cls");
-
-					s.f_wheel();
-
-					break;
+                system("cls");
+				s.f_wheel();
+				break;
 
 			case 4:
 
-                    system("cls");
-
-					s.Show();
-
-					break;
+                system("cls");
+				s.Show();
+				break;
 
 			case 5:
 
-                    system("cls");
-
-					s.Delet();
-
-					break;
+                system("cls");
+				s.Delet();
+				break;
 
             case 6:
 
-                    exit(0);
+                exit(0);
 
-			default:
+			default:{
 
-			{
-
-			    system("cls");
-
+				system("cls");
 				cout<<"**************************************************"<<endl;
-
 				cout<<"WRONG INPUT"<<endl;
-
 				cout<<"**************************************************"<<endl;
-
-
-
 			}
 
 		}
 
 	}
-
-
 
 	return(0);
 
